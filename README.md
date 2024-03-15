@@ -1,2 +1,2 @@
 # Mysite
- this will be my first website ever
+ creating a website via Django framework.
