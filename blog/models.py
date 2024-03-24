@@ -28,4 +28,8 @@ class Post(models.Model):
     class Meta:
         ordering = ['-created_date']
         
+        
+def snippets(self):
+    return self.content[:100] + '...'
+        
 
