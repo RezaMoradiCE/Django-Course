@@ -11,6 +11,12 @@ def function():
 def function():
     post = Post.objects.filter(status=1)
     return post
+
 @register.filter
 def snippet(value, arg=20):
     return value [:arg] +'...'
+
+@register.inclusion_tag('popularposts.html')
+def popularposts():
+    posts = Post.objects.filter(status=1).order_by('published_date')
+    return {'posts' : posts}
