@@ -11,4 +11,6 @@ def function():
 def function():
     post = Post.objects.filter(status=1)
     return post
-    
+@register.filter
+def snippet(value, arg=20):
+    return value [:arg] +'...'
